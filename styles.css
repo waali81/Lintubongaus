@@ -285,7 +285,7 @@ table th:nth-child(n+2):nth-child(-n+5) {
   max-width: 320px;
   height: auto;
   text-align: center;
-  box-sizing: border-box;
+  
 }
 
 .password-box input {
@@ -390,15 +390,11 @@ table th:nth-child(n+2):nth-child(-n+5) {
   }
 
   /* Salasana-modal */
-/*   .password-box {
+   .password-box {
     width: 90%;
     padding: 20px;
-  } */
-  .password-box {
-    width: 100%;
-    max-width: 100%;
-    padding: 20px;
   }
+ 
 
   #passwordBtn {
     font-size: 1rem;
