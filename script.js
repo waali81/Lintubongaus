@@ -2,7 +2,7 @@
 // ==============================
 // 🔐 Salasana-modal
 // ==============================
-const PASSWORD = "Lintubongaus";
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("passwordModal");
@@ -230,5 +230,5 @@ function attachSorting() {
 }
 
 
-
+const PASSWORD = "Lintubongaus";
 attachSorting();
