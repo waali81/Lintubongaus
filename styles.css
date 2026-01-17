@@ -1,0 +1,318 @@
+
+
+:root {
+  --bg: #0f172a;              /* tausta */
+  --card: #111827;            /* kortit & modal */
+  --primary: #6366f1;         /* sinivioletti */
+  --primary-hover: #818cf8;
+  --accent: #22c55e;          /* vihreä */
+  --danger: #ef4444;
+  --text: #e5e7eb;            /* pääteksti */
+  --muted: #9ca3af;
+  --border: #1f2937;
+}
+
+
+
+html, body {
+  overflow: hidden;
+  min-height: 100%;
+  margin: 0;
+}
+
+/* Sivun pohja */
+body {
+  font-family: sans-serif;
+  background: linear-gradient(160deg, #020617, #0f172a);
+  color: var(--text);
+  max-width: 650px;
+  min-height: 100vh;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Otsikot */
+h1 {
+  text-align: center;
+  margin-top: 130px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #c7d2fe;
+}
+
+/* Kentät */
+input,
+select {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #020617;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+input::placeholder {
+  color: var(--muted);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+}
+
+input[type="date"] {
+  max-width: 180px;
+}
+
+#type {
+  max-width: 200px;
+}
+
+/* Napit */
+button {
+  font-family: sans-serif;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* Päänapit */
+#saveBtn {
+  margin-top: 10px;
+  background: var(--accent);
+  color: #022c22;
+  margin-right: 10px;
+}
+
+#saveBtn:hover {
+  background: #16a34a;
+}
+
+#showBtn {
+  margin-top: 10px;
+  background: var(--primary);
+  color: #020617;
+}
+
+#showBtn:hover {
+  background: var(--primary-hover);
+}
+
+/* Taulukko */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+th {
+  background: #020617;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+th[data-sort] {
+  cursor: pointer;
+}
+
+th[data-sort]:hover {
+  color: var(--primary);
+}
+
+tr:hover {
+  background: #020617;
+}
+
+td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 130px;
+}
+
+/* Poistonappi */
+.delete-btn {
+  background: #3f1d1d;
+  color: #fecaca;
+  border: 1px solid #7f1d1d;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+}
+
+.delete-btn:hover {
+  background: #7f1d1d;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.8);
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--card);
+  margin: 8% auto;
+  padding: 20px;
+  border-radius: 16px;
+
+  width: 95%;
+  max-width: 850px;
+  height: 450px;
+
+  overflow-y: auto;   /* 👈 pystyscroll */
+  overflow-x: hidden;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.25s ease;
+}
+
+
+/* Sulje-nappi */
+.close {
+  float: right;
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.close:hover {
+  color: var(--text);
+}
+
+/* Laskuri */
+#birdCount {
+  margin-top: 15px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* Modal animaatio */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-container
+ {
+  max-width: 360px;
+  margin: 0 auto;        /* 👈 keskitys */
+  padding: 20px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(1.2);
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+#birdCount strong {
+  display: block;
+  margin-bottom: 8px; /* säädä tätä */
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Ensimmäinen sarake (Lintu) vasemmalle */
+table td:nth-child(1),
+table th:nth-child(1) {
+  text-align: left;
+}
+
+/* Viimeinen sarake (Poista-painike) oikealle */
+table td:last-child,
+table th:last-child {
+  text-align: right;
+}
+
+/* Keskellä olevat sarakkeet */
+table td:nth-child(n+2):nth-child(-n+5),
+table th:nth-child(n+2):nth-child(-n+5) {
+  text-align: center;
+}
+
+/* 🔐 Salasana-modal */
+.password-box {
+  padding: 24px;
+  max-width: 320px;
+  height: auto;
+  text-align: center;
+}
+
+.password-box input {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#passwordBtn {
+  margin-top: 10px;
+  width: 100%;
+  background: var(--primary);
+  color: #020617;
+}
+
+#passwordBtn:hover {
+  background: var(--primary-hover);
+}
+
+#passwordError {
+  display: none;
+  margin-top: 30px;
+  color: var(--danger);
+  font-size: 0.9rem;
+}
+
+
+
+
+
+

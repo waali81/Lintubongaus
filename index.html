@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lintubongaus</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 🔐 Salasana-modal -->
+  <div id="passwordModal" class="modal">
+    <div class="modal-content password-box">
+      <h2>Anna salasana</h2>
+      <input type="password" id="passwordInput" placeholder="Salasana"/>
+      <button id="passwordBtn">Kirjaudu</button>
+      <p id="passwordError">Väärä salasana, yritä uudelleen!</p>
+    </div>
+  </div>
+
+    <h1>Lintubongaus</h1>
+
+  <!--  <h2>Lisää bongaus</h2> -->
+    <div class="form-container">
+      <h2>Lisää bongaus</h2>
+      <input type="text" id="name" placeholder="Lintu">
+      <input type="date" id="date">
+      <input type="text" id="place" placeholder="Paikka">
+      <select id="type">
+          <option value="">Havaintotyyppi</option>
+          <option value="Nähty">Nähty</option>
+          <option value="Kuultu">Kuultu</option>
+      </select>
+      <input type="text" id="observer" placeholder="Bongaaja">
+
+      <button id="saveBtn">Tallenna</button>
+      <button id="showBtn">Näytä bongaukset</button>
+    </div>
+    <!-- Modal -->
+    <div id="birdModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>Bongaukset</h2>
+        <table>
+          <thead>
+            <tr>
+              <th data-sort="name">Lintu</th>
+              <th data-sort="date">Päivämäärä</th>
+              <th data-sort="place">Paikka</th>
+              <th data-sort="type">Tyyppi</th>
+              <th data-sort="observer">Bongaaja</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="modalBirdList"></tbody>
+        </table>
+        <p id="birdCount"></p>
+      </div>
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>
