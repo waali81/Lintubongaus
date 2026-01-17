@@ -15,7 +15,7 @@
 
 
 html, body {
-  overflow: hidden;
+  /* overflow: hidden; */
   min-height: 100%;
   margin: 0;
 }
@@ -57,6 +57,7 @@ select {
   background: #020617;
   color: var(--text);
   font-size: 0.95rem;
+  box-sizing: border-box;
 }
 
 input::placeholder {
@@ -310,6 +311,94 @@ table th:nth-child(n+2):nth-child(-n+5) {
   color: var(--danger);
   font-size: 0.9rem;
 }
+
+@media (max-width: 900px) {
+
+  html, body {
+    overflow: auto;
+  }
+
+  body {
+    padding: 12px;
+    max-width: 100%;
+  }
+
+  h1 {
+    margin-top: 60px;
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  /* Lomake koko leveydelle */
+  .form-container {
+    max-width: 100%;
+    padding: 12px;
+  }
+
+  input,
+  select {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  input[type="date"] {
+    max-width: 100%;
+  }
+
+  #type {
+    max-width: 100%;
+  }
+
+  /* Napit allekkain */
+  #saveBtn,
+  #showBtn {
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+
+  /* Modal */
+  .modal-content {
+    overflow: auto;
+    margin: 10% auto;
+    width: 95%;
+    height: auto;
+    max-height: 75vh;
+    padding: 14px;
+  }
+
+  /* Taulukko → scrollattava */
+  table {
+    font-size: 0.8rem;
+  }
+
+  th,
+  td {
+    padding: 6px;
+  }
+
+
+
+  /* Poistonappi pienemmäksi */
+  .delete-btn {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+  }
+
+  /* Salasana-modal */
+  .password-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #passwordBtn {
+    font-size: 1rem;
+  }
+}
+
 
 
 
