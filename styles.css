@@ -370,14 +370,38 @@ table th:nth-child(n+2):nth-child(-n+5) {
     margin: 10px 0 0 0;
   }
 
+  .modal {
+    padding: 0px;
+  }
+
   /* Modal */
   .modal-content {
+    position: relative; /*tämä uusin*/
     overflow: auto;
-    margin: 10% auto;
+    margin: 8px auto;
     width: 95%;
     height: auto;
     max-height: 75vh;
     padding: 14px;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    max-height: none;
+    border-radius: 0;
+
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; /* iOS scroll */
+
+
+  }
+
+  .close {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    font-size: 26px;
+    z-index: 1001;    /* modalin päälle */
   }
 
   /* Taulukko → scrollattava */
@@ -400,6 +424,7 @@ table th:nth-child(n+2):nth-child(-n+5) {
 
   /* Salasana-modal */
    .password-box {
+    margin: 10% auto;
     width: 90%;
     padding: 20px;
   }
