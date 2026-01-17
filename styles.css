@@ -374,9 +374,11 @@ table th:nth-child(n+2):nth-child(-n+5) {
     padding: 0px;
   }
 
+
+
   /* Modal */
-  .modal-content {
-    position: relative; /*tämä uusin*/
+   .modal-content {
+    position: relative;
     overflow: auto;
     margin: 8px auto;
     width: 95%;
@@ -391,7 +393,7 @@ table th:nth-child(n+2):nth-child(-n+5) {
     border-radius: 0;
 
     overflow: auto;
-    -webkit-overflow-scrolling: touch; /* iOS scroll */
+    -webkit-overflow-scrolling: touch; 
 
 
   }
@@ -401,7 +403,7 @@ table th:nth-child(n+2):nth-child(-n+5) {
     top: 12px;
     right: 12px;
     font-size: 26px;
-    z-index: 1001;    /* modalin päälle */
+    z-index: 1001;    
   }
 
   /* Taulukko → scrollattava */
