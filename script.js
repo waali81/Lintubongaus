@@ -230,5 +230,5 @@ function attachSorting() {
 }
 
 
-const PASSWORD = "Bongaus";
+const PASSWORD = "Lb26";
 attachSorting();
