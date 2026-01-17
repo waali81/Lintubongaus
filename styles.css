@@ -279,6 +279,11 @@ table th:nth-child(n+2):nth-child(-n+5) {
   text-align: center;
 }
 
+.modal-content,
+.password-box {
+  box-sizing: border-box;
+}
+
 /* 🔐 Salasana-modal */
 .password-box {
   padding: 24px;
