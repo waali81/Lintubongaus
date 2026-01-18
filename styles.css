@@ -508,6 +508,7 @@ table th:nth-child(n+2):nth-child(-n+5) {
    .password-box {
     margin: 10% auto;
     width: 90%;
+    height: 90%;
     padding: 20px;
   }
  
