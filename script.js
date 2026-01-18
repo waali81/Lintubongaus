@@ -135,6 +135,11 @@ saveBtn.addEventListener("click", async () => {
     return;
   }
 
+  if (observer.charAt(0) !== observer.charAt(0).toUpperCase()) {
+  alert("Bongaajan nimen tulee alkaa isolla kirjaimella!");
+  return;
+  }
+
   // 🔹 Lataa olemassa olevat bongaukset
   await loadBirds();
 
