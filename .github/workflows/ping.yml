@@ -1,0 +1,14 @@
+name: Keep project alive
+
+on:
+  schedule:
+    - cron: '0 7 * * *'   # joka päivä klo 07 UTC (~09 Suomen aikaa)
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping project
+        run: |
+          curl -s https://waali81.github.io/Lintubongaus/ > /dev/null
