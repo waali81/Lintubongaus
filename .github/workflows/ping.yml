@@ -2,7 +2,7 @@ name: Keep project alive
 
 on:
   schedule:
-    - cron: '0 7 * * *'   # joka päivä klo 07 UTC (~09 Suomen aikaa)
+    - cron: '0 7,19 * * *'   # joka päivä klo 07 UTC (~09 Suomen aikaa)
   workflow_dispatch:
 
 jobs:
